@@ -21,6 +21,8 @@ inputs:
     description: 'Variable for target for SCP'
     required: true
 
+  keep_key:
+    description: 'Indicates whether to save the key for further work'
 # Comment
 runs:
   using: 'docker'
