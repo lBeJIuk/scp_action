@@ -1,5 +1,10 @@
 #!/bin/sh
-echo "my action"
-echo $INPUT_TEST_VAR
-touch $INPUT_TEST_VAR
-ls
+
+echo "$INPUT_PUBLIC_KEY" > key
+chmod 700 key
+scp -o StrictHostKeyChecking=no \
+    -o UserKnownHostsFile=/dev/null \
+    -r \
+    -i key \
+    -P $INPUT_SSH_PORT \
+    $INPUT_SOURCE $INPUT_SSH_USERNAME@$INPUT_SSH_HOST:$INPUT_TARGET
