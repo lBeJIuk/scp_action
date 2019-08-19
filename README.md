@@ -23,7 +23,7 @@ jobs:
         target: '/root/'
 ```
 
-The script will create a "./key" file, which can be used in the following steps
+The script will create a "./key" file, which can be used in the following steps, if "keep_key" variable was set.
 The action takes on the following parameters:
 - public_key __*required__
 - ssh_port __default: '22'__
@@ -31,3 +31,4 @@ The action takes on the following parameters:
 - ssh_host __*required__
 - source __*required__
 - target __*required__
+- keep_key __default: [not_set]__
