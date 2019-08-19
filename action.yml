@@ -1,0 +1,11 @@
+name: 'Test'
+description: 'Test descr'
+author: 'lBeJIuk'
+inputs:
+  test-var:
+    description: 'test var description'
+    default: 'hello world'
+# Comment
+runs:
+  using: 'sh'
+  main: 'entrypoint.sh'
