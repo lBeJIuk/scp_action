@@ -7,5 +7,5 @@ inputs:
     default: 'hello world'
 # Comment
 runs:
-  using: 'sh'
-  main: 'entrypoint.sh'
+  using: 'docker'
+  image: 'Dockerfile'
