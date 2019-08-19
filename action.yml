@@ -4,6 +4,7 @@ author: 'lBeJIuk'
 inputs:
   public_key:
     description: 'Variable for public key'
+    required: true
   ssh_port:
     description: 'Variable for non standard ssh port'
     default: '22'
