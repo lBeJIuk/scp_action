@@ -2,6 +2,6 @@ FROM node:10
 
 ADD entrypoint.sh /entrypoint.sh
 
-RUN ls /
+RUN ls -la /
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["sh", "/entrypoint.sh"]
