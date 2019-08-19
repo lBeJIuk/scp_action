@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: 'Custom name'
-      uses: lbejiuk/scp_action@master
+      uses: lbejiuk/scp_action@v1
       with:
         public_key: ${{secrets.TEST_API_KEY}}
         ssh_port: 10000
