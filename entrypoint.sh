@@ -8,3 +8,8 @@ scp -o StrictHostKeyChecking=no \
     -i key \
     -P $INPUT_SSH_PORT \
     $INPUT_SOURCE $INPUT_SSH_USERNAME@$INPUT_SSH_HOST:$INPUT_TARGET
+
+if [ -z "$INPUT_KEEP_KEY" ]
+then
+shred key -n 10  -v -z -u
+fi
