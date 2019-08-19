@@ -1,10 +1,25 @@
-name: 'Test'
-description: 'Test descr'
+name: 'SCP action wrapper'
+description: 'SCP action wrapper'
 author: 'lBeJIuk'
 inputs:
-  test_var:
-    description: 'test var description'
-    default: 'hello world'
+  public_key:
+    description: 'Variable for public key'
+  ssh_port:
+    description: 'Variable for non standard ssh port'
+    default: '22'
+  ssh_username:
+    descriptions: 'Variable for user name for SSH connection'
+    required: true
+  ssh_host:
+    description: 'Variable for host for SSH connection'
+    required: true
+  source:
+    description: 'Variable for source for SCP'
+    required: true
+  target:
+    description: 'Variable for target for SCP'
+    required: true
+
 # Comment
 runs:
   using: 'docker'
